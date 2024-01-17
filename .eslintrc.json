@@ -1,3 +1,21 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "airbnb",
+    "airbnb/hooks",
+    "airbnb-typescript",
+    "prettier"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/destructuring-assignment": "off",
+    "react/require-default-props": "off",
+    "react/jsx-props-no-spreading": "off"
+  },
+  "ignorePatterns": [
+    "src/components/ui/*"
+  ]
 }

@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import './globals.css';
+import "./globals.css";
 
 interface RootLayoutProps {
   children: ReactNode;
@@ -9,11 +9,9 @@ interface RootLayoutProps {
 function RootLayout(props: RootLayoutProps) {
   return (
     <html className="scroll-smooth" lang="it">
-      <body className="bg-slate-100">
-        {props.children}
-      </body>
+      <body className="bg-slate-100">{props.children}</body>
     </html>
-  )
+  );
 }
 
 export default RootLayout;

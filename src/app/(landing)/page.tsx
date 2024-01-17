@@ -6,12 +6,12 @@ import ProjectsSection from "@/app/(landing)/_components/sections/projects";
 function HomePage() {
   return (
     <main>
-      <LandingSection/>
-      <PresentationSection/>
-      <KnowledgeSection/>
-      <ProjectsSection/>
+      <LandingSection />
+      <PresentationSection />
+      <KnowledgeSection />
+      <ProjectsSection />
     </main>
-  )
+  );
 }
 
 export default HomePage;

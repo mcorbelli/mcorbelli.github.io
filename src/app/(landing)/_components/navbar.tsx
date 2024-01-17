@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -11,13 +11,13 @@ function NavBar() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const isBasePath = (pathname === "/");
-    setPrefix(isBasePath ? "": "/");
+    const isBasePath = pathname === "/";
+    setPrefix(isBasePath ? "" : "/");
   }, [pathname]);
 
   return (
     <nav className="absolute top-0 flex w-screen p-4 gap-x-4">
-      <Logo/>
+      <Logo />
       <div className="flex justify-between w-full">
         <div className="flex flex-row gap-x-2">
           <Link href={`${prefix}#presentation`}>Presentation</Link>
