@@ -6,7 +6,10 @@ interface LogoProps {
 
 function Logo(props: LogoProps) {
   return (
-    <Link className="whitespace-nowrap" href={props.redirectPath ?? "/"}>
+    <Link
+      className="whitespace-nowrap font-bold"
+      href={props.redirectPath ?? "/"}
+    >
       Corbelli Mattia
     </Link>
   );
