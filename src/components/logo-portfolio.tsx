@@ -13,7 +13,7 @@ function LogoPortfolio(props: LogoProps) {
   return (
     <Link
       className={cn(
-        "flex items-center gap-3 hover:opacity-70 transition",
+        "flex items-center gap-2 hover:opacity-70 transition",
         props.className,
       )}
       href={props.redirectPath ?? "/"}
@@ -24,7 +24,7 @@ function LogoPortfolio(props: LogoProps) {
         height={30.0}
         alt="Portfolio Logo"
       />
-      <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+      <span className="text-xl font-semibold whitespace-nowrap">
         Corbelli Mattia
       </span>
     </Link>

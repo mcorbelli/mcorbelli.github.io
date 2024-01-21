@@ -32,7 +32,12 @@ function NavBar() {
             className="hidden md:flex"
             navElements={navElements}
           />
-          <Button size="sm" variant="outline" asChild>
+          <Button
+            className="hidden md:flex"
+            size="sm"
+            variant="outline"
+            asChild
+          >
             <Link href="/contact">Contact</Link>
           </Button>
           <BurgerMenu className="md:hidden" />
