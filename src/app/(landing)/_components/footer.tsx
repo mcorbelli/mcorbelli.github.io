@@ -1,16 +1,36 @@
-import Link from "next/link";
+import LogoPortfolio from "@/components/logo-portfolio";
+import Copyright from "@/components/copyright";
+import { Separator } from "@/components/ui/separator";
+import NavigationMenu, { NavElement } from "@/components/navigation-menu";
 
-import Logo from "@/components/logo";
+const navElements: NavElement[] = [
+  {
+    label: "Landing",
+    anchor: "#landing",
+  },
+  {
+    label: "Presentation",
+    anchor: "#presentation",
+  },
+  {
+    label: "Knowledge",
+    anchor: "#knowledge",
+  },
+  {
+    label: "Projects",
+    anchor: "#projects",
+  },
+];
 
 function Footer() {
   return (
-    <footer className="flex flex-row w-full p-4 gap-x-4">
-      <Logo />
-      <div className="flex flex-row gap-x-2">
-        <Link href="#presentation">Presentation</Link>
-        <Link href="#knowledge">Knowledge</Link>
-        <Link href="/contacts">Contacts</Link>
+    <footer className="w-full max-w-screen-2xl mx-auto p-4 md:py-8">
+      <div className="sm:flex sm:items-center sm:justify-between">
+        <LogoPortfolio className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse" />
+        <NavigationMenu className="flex" navElements={navElements} />
       </div>
+      <Separator className="my-6 bg-gray-300 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <Copyright year={2024} name="Corbelli Mattia" />
     </footer>
   );
 }

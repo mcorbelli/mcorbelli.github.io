@@ -2,7 +2,7 @@ function KnowledgeSection() {
   return (
     <section
       id="knowledge"
-      className="h-screen flex justify-center items-center border-b"
+      className="h-screen flex justify-center items-center"
     >
       KNOWLEDGE SECTION
     </section>

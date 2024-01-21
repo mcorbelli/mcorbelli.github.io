@@ -2,7 +2,7 @@ function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="h-screen flex justify-center items-center border-b"
+      className="h-screen flex justify-center items-center"
     >
       PROJECTS SECTION
     </section>

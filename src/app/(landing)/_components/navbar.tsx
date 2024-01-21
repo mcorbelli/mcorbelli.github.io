@@ -1,34 +1,45 @@
-"use client";
-
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
 
-import Logo from "@/components/logo";
+import LogoPortfolio from "@/components/logo-portfolio";
+import AvatarDropdown from "@/components/avatar-dropdown";
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import NavigationMenu, { NavElement } from "@/components/navigation-menu";
+import BurgerMenu from "@/components/burger-menu";
+
+const navElements: NavElement[] = [
+  {
+    label: "Presentation",
+    anchor: "#presentation",
+  },
+  {
+    label: "Knowledge",
+    anchor: "#knowledge",
+  },
+  {
+    label: "Projects",
+    anchor: "#projects",
+  },
+];
 
 function NavBar() {
-  const [prefix, setPrefix] = useState("");
-  const pathname = usePathname();
-
-  useEffect(() => {
-    const isBasePath = pathname === "/";
-    setPrefix(isBasePath ? "" : "/");
-  }, [pathname]);
-
   return (
-    <nav className="absolute top-0 flex w-screen p-4 gap-x-4 items-center">
-      <Logo />
-      <div className="flex justify-between items-center w-full">
-        <div className="space-x-4 block w-full">
-          <Link href={`${prefix}#presentation`}>Presentation</Link>
-          <Link href={`${prefix}#knowledge`}>Knowledge</Link>
-          <Link href={`${prefix}#projects`}>Projects</Link>
-        </div>
-        <div className="space-x-4 block">
+    <nav className="absolute w-screen">
+      <div className="flex justify-between max-w-screen-2xl mx-auto p-4">
+        <LogoPortfolio />
+        <div className="flex gap-4 items-center">
+          <NavigationMenu
+            className="hidden md:flex"
+            navElements={navElements}
+          />
           <Button size="sm" variant="outline" asChild>
-            <Link href="/contact">CONTACT</Link>
+            <Link href="/contact">Contact</Link>
           </Button>
+          <BurgerMenu className="md:hidden" />
+          <div className="hidden md:flex gap-4 items-center">
+            <Separator orientation="vertical" className="h-4 bg-gray-300" />
+            <AvatarDropdown />
+          </div>
         </div>
       </div>
     </nav>
