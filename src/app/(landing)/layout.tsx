@@ -9,11 +9,11 @@ interface RootLayoutProps {
 
 function RootLayout(props: RootLayoutProps) {
   return (
-    <div className="bg-slate-100">
+    <>
       <NavBar />
       {props.children}
       <Footer />
-    </div>
+    </>
   );
 }
 

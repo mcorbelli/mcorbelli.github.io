@@ -21,7 +21,7 @@ interface RootLayoutProps {
 function RootLayout(props: RootLayoutProps) {
   return (
     <html className="scroll-smooth" lang="it">
-      <body>{props.children}</body>
+      <body className="bg-slate-100">{props.children}</body>
     </html>
   );
 }

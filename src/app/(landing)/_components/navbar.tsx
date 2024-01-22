@@ -24,27 +24,17 @@ const navElements: NavElement[] = [
 
 function NavBar() {
   return (
-    <nav className="absolute w-screen">
-      <div className="flex justify-between max-w-screen-2xl mx-auto p-4">
-        <LogoPortfolio />
-        <div className="flex gap-4 items-center">
-          <NavigationMenu
-            className="hidden md:flex"
-            navElements={navElements}
-          />
-          <Button
-            className="hidden md:flex"
-            size="sm"
-            variant="outline"
-            asChild
-          >
-            <Link href="/contact">Contact</Link>
-          </Button>
-          <BurgerMenu className="md:hidden" />
-          <div className="hidden md:flex gap-4 items-center">
-            <Separator orientation="vertical" className="h-4 bg-gray-300" />
-            <AvatarDropdown />
-          </div>
+    <nav className="flex justify-between w-full max-w-screen-2xl mx-auto p-4">
+      <LogoPortfolio />
+      <div className="flex gap-4 items-center">
+        <NavigationMenu className="hidden md:flex" navElements={navElements} />
+        <Button className="hidden md:flex" size="sm" variant="outline" asChild>
+          <Link href="/contact">Contact</Link>
+        </Button>
+        <BurgerMenu className="md:hidden" />
+        <div className="hidden md:flex gap-4 items-center">
+          <Separator orientation="vertical" className="h-4 bg-gray-300" />
+          <AvatarDropdown />
         </div>
       </div>
     </nav>
