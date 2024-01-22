@@ -24,7 +24,7 @@ const navElements: NavElement[] = [
 
 function NavBar() {
   return (
-    <nav className="flex justify-between w-full max-w-screen-2xl mx-auto p-4">
+    <nav className="flex justify-between p-4">
       <LogoPortfolio />
       <div className="flex gap-4 items-center">
         <NavigationMenu className="hidden md:flex" navElements={navElements} />

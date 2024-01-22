@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   },
   description: siteConfigs.description,
   icons: siteConfigs.icon,
+  authors: {
+    url: siteConfigs.author.url,
+    name: siteConfigs.author.name,
+  },
 };
 
 interface RootLayoutProps {
@@ -21,7 +25,9 @@ interface RootLayoutProps {
 function RootLayout(props: RootLayoutProps) {
   return (
     <html className="scroll-smooth" lang="it">
-      <body className="bg-slate-100">{props.children}</body>
+      <body className="w-full max-w-screen-2xl mx-auto bg-slate-100">
+        {props.children}
+      </body>
     </html>
   );
 }
